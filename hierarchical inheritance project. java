@@ -1,0 +1,118 @@
+import java.util.Scanner;
+class Project
+{
+    private String programming_language,project_manager_name,managerExperience;
+    private int total_no_of_engineers,project_manager_id;
+}
+class Software_Project extends Project
+{
+    private String projectName;
+    private int duration;
+
+    Software_Project(String projectName,int duration)
+    {
+        this.projectName=projectName;
+        this.duration=duration;
+    }
+    void setprojectName(String projectName)
+    {
+        this.projectName=projectName;
+    }
+ public  String getprojectName()
+    {
+        return projectName;
+    }
+    void setDuration(int duration)
+    {
+        this.duration=duration;
+    }
+ public  int getDuration()
+    {
+        return duration;
+    }
+    public String toString()
+    {
+        return getprojectName()+" "+getDuration();
+    }
+}
+class Hardware_Project extends Project
+{
+    private String projectName;
+    private int duration;
+    Hardware_Project(String projectName,int duration)
+    {
+        this.projectName=projectName;
+        this.duration=duration;
+    }
+    void setprojectName(String projectName)
+    {
+        this.projectName=projectName;
+    }
+ public  String getprojectName()
+    {
+        return projectName;
+    }
+    void setDuration(int duration)
+    {
+        this.duration=duration;
+    }
+ public  int getDuration()
+    {
+        return duration;
+    }
+    public String toString()
+    {
+        return getprojectName()+" "+getDuration();
+    }
+}
+/*class Engineers1 extends Software_Project
+{
+    Engineers1(Software_Project []arr)
+    {
+        double sum=0;
+        
+    }
+    
+}
+class Engineers2 extends Hardware_Project
+{
+    Engineers2(Hardware_Project []arr)
+    {
+        double sum=0;
+        
+    }
+}*/
+public class Main
+{
+	public static void main(String[] args) 
+	{
+	 Scanner sc=new Scanner(System.in);
+	 Software_Project []s_object=new Software_Project[10];
+	 Hardware_Project []h_object=new Hardware_Project[10];
+
+	 for(int i=0;i<2;i++)
+	 {
+	    String aa;
+	    int bb;
+	    bb=sc.nextInt();
+	    sc.nextLine();
+	    aa=sc.nextLine();
+	     s_object[i]=new Software_Project(aa,bb);
+	 }
+	 for(int i=0;i<2;i++)
+	 {
+	    String aa;
+	    int bb;
+	    bb=sc.nextInt();
+	    sc.nextLine();
+	    aa=sc.nextLine();
+	     h_object[i]=new Hardware_Project(aa,bb);
+	 }
+	 for(int i=0;i<2;i++)
+	 {
+	     System.out.println(s_object[i].toString());
+	 }
+	 
+	 
+	}
+}
